@@ -1,0 +1,182 @@
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Profile Title */
+.profile-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Profile Content */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Profile Details */
+.profile-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #416f8d;
+}
+
+.profile-details p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.profile-details p strong {
+  color: #2e536c;
+}
+
+/* Chart Container */
+.chart-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Feedback Section */
+.feedback-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.feedback-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.feedback-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-section textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.feedback-section textarea:focus {
+  border-color: #1d4a67;
+  outline: none;
+}
+
+.feedback-section button {
+  align-self: flex-start;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #003366; /* Dark blue color */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-section button:hover {
+  background: #002244; /* Slightly darker blue */
+  transform: translateY(-2px);
+}
+/* Popup Message */
+.popup-message {
+  position: fixed;
+  top: 20px; /* Positioned 20px from the top */
+  right: 20px; /* Positioned 20px from the right */
+  background-color: #162447; /* Green color */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  z-index: 1000;
+}
+
+
+/* Reviews Section */
+.reviews-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.reviews-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews-section li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviews-section li:last-child {
+  border-bottom: none;
+}
+
+.reviews-section strong {
+  display: block;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #f1c40f;
+  font-size: 1rem;
+}

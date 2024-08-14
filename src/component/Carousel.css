@@ -1,0 +1,103 @@
+/* src/components/Carousel.css */
+
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 100%; /* Full width of parent */
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Each item takes full width */
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Adjust height based on content */
+  max-height: 650px; /* Set a maximum height to prevent it from getting too large */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  object-position: center; /* Center the image */
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure controls are above images */
+}
+
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px; /* Adjusted for better visibility */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10; /* Ensure indicators are above images */
+}
+
+.carousel-indicator {
+  width: 12px; /* Slightly larger for better visibility */
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item img {
+      max-height: 300px; /* Adjust maximum height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+      max-height: 300px; /* Further adjust maximum height for very small screens */
+  }
+
+  .carousel-control {
+      padding: 8px; /* Smaller controls for smaller screens */
+  }
+
+  .carousel-indicators {
+      bottom: 10px; /* Adjust indicator position for smaller screens */
+  }
+
+  .carousel-indicator {
+      width: 8px; /* Smaller indicators for smaller screens */
+      height: 8px;
+  }
+}

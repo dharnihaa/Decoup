@@ -1,0 +1,11 @@
+/* src/pages/Search.css */
+.search {
+    padding-top: 60px; /* To offset the fixed navbar */
+    margin: 20px;
+  }
+  
+  .coupon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

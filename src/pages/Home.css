@@ -1,0 +1,211 @@
+/* src/pages/HomePage.css */
+.carousel-container {
+  margin-bottom: 3rem; /* Increased space for carousel separation */
+}
+
+.section {
+  margin: 2rem 0; /* Added space above and below each section */
+}
+
+.section h2 {
+  font-size: 2rem; /* Slightly smaller font size for h2 */
+  margin-bottom: 1.5rem;
+  color: #34495e;
+  text-align: center; /* Center align the text */
+}
+
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 1.5rem; /* Reduced gap between cards */
+  max-width: 1100px; /* Adjusted max width */
+  margin: 0 auto; /* Center the grid */
+}
+
+.coupon-card {
+  border: 1px solid #ddd; /* Border around the card */
+  border-radius: 12px; /* Slightly larger border-radius for a modern look */
+  padding: 0;
+  background-color: #ffffff; /* Clean white background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Different shadow style */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%; /* Full width of the grid column */
+  height: 300px; /* Increased height for a larger card */
+}
+
+.coupon-card:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.coupon-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.coupon-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.coupon-card .card-front,
+.coupon-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-card .card-front {
+  z-index: 2;
+  background-color: #f0f4f8; /* Light background for the front */
+}
+
+.coupon-card .card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background-color: #e9eff1; /* Different light background for the back */
+}
+
+.coupon-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem; /* Slightly reduced padding */
+}
+
+.coupon-card h3 {
+  font-size: 1.6rem; /* Slightly smaller font size for h3 */
+  margin-top: 0;
+  color: #34495e;
+}
+
+.coupon-card p {
+  font-size: 1rem; /* Slightly smaller font size for paragraphs */
+  color: #95a5a6;
+}
+
+.coupon-card button {
+  background-color: #1b2641; /* Different button color */
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem; /* Reduced padding for button */
+  border-radius: 6px; /* Slightly larger border-radius */
+  cursor: pointer;
+  font-size: 1rem; /* Slightly smaller font size for button */
+  transition: background-color 0.3s ease;
+}
+
+.coupon-card button:hover {
+  background-color: #16a085; /* Darker shade for hover */
+
+  .animation-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.animation-container img {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+}
+/* src/pages/HomePage.css */
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Modal content styling */
+.modal-content {
+  background: #ffffff; /* White background for the modal */
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  width: 90%;
+  max-width: 500px; /* Maximum width of the modal */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Modal close button styling */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 24px; /* Larger font size for easy clicking */
+  cursor: pointer;
+  color: #333333; /* Dark color for better visibility */
+}
+
+/* Modal heading styling */
+.modal-content h2 {
+  font-size: 1.8rem; /* Larger font size for the heading */
+  margin-bottom: 1rem; /* Space below the heading */
+  color: #333333; /* Dark text color for readability */
+}
+
+/* Label styling */
+.modal-content label {
+  font-size: 1rem;
+  color: #333333; /* Dark text color for labels */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Input and textarea styling */
+.modal-content input,
+.modal-content textarea {
+  margin-bottom: 1rem; /* Space between form elements */
+  padding: 0.75rem; /* Padding inside form elements */
+  border: 1px solid #ccc; /* Light border for form elements */
+  border-radius: 6px; /* Rounded corners for form elements */
+  width: 100%; /* Full width of the modal */
+}
+
+/* Textarea specific styling */
+.modal-content textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px; /* Minimum height for textarea */
+}
+
+/* Submit button styling */
+.modal-content button {
+  background-color: #295684; /* Bright blue color for the button */
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem; /* Padding inside the button */
+  border-radius: 8px; /* Rounded corners for the button */
+  cursor: pointer;
+  font-size: 1rem; /* Font size for the button */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+}
+
+/* Submit button hover effect */
+.modal-content button:hover {
+  background-color: #1a436c; /* Slightly darker blue on hover */
+  transform: scale(1.03); /* Slight scaling effect on hover */
+}
